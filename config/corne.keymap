@@ -23,7 +23,7 @@
             bindings = <
 &kp TAB           &kp Q  &kp W  &kp E     &kp R       &kp T             &kp Y      &kp U              &kp I           &kp O    &kp P      &kp BSPC
 &mt LCTRL ESCAPE  &kp A  &kp S  &kp D     &kp F       &kp G             &kp H      &kp J              &kp K           &kp L    &kp PLUS   &kp ENTER
-&kp LEFT_ALT      &kp Z  &kp X  &kp C     &kp V       &kp B             &kp N      &kp M              &kp COMMA       &kp DOT  &kp MINUS  &kp ESC
+&kp LEFT_ALT      &kp Z  &kp X  &kp C     &kp V       &kp B             &kp N      &kp M              &kp COMMA       &kp DOT  &kp MINUS  &kp K_CANCEL
                                 &kp LGUI  &lt 2 CAPS  &kp LEFT_SHIFT    &kp SPACE  &lt 1 PRINTSCREEN  &mt RALT ENTER
             >;
         };
@@ -36,10 +36,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1             &kp N2  &kp N3    &kp N4   &kp N5           &kp N6    &kp N7    &kp N8         &kp N9     &kp N0          &kp BSPC
-&trans  &kp C_VOLUME_UP    &trans  &trans    &trans   &kp PAGE_UP      &kp LEFT  &kp DOWN  &kp UP         &kp RIGHT  &kp ASTERISK    &bt BT_CLR
-&trans  &kp C_VOLUME_DOWN  &trans  &trans    &kp END  &kp PAGE_DOWN    &trans    &trans    &kp SEMICOLON  &kp COLON  &kp UNDERSCORE  &bt BT_NXT
-                                   &kp LGUI  &trans   &trans           &trans    &trans    &trans
+&kp C_MUTE            &kp N1             &kp N2         &kp N3            &kp N4   &kp N5           &kp N6    &kp N7    &kp N8         &kp N9     &kp N0          &kp BSPC
+&kp C_BRI_UP          &kp C_VOLUME_UP    &kp LESS_THAN  &kp GREATER_THAN  &trans   &kp PAGE_UP      &kp LEFT  &kp DOWN  &kp UP         &kp RIGHT  &kp ASTERISK    &bt BT_CLR
+&kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans         &trans            &kp END  &kp PAGE_DOWN    &trans    &trans    &kp SEMICOLON  &kp COLON  &kp UNDERSCORE  &bt BT_NXT
+                                                        &kp LGUI          &trans   &trans           &trans    &trans    &trans
             >;
         };
 
@@ -53,8 +53,8 @@
             bindings = <
 &kp PIPE          &kp BACKSLASH  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp DLLR  &kp PRCNT    &kp AMPERSAND  &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &kp BSPC
 &kp LCTRL         &kt QUESTION   &trans           &trans             &trans    &trans       &trans         &trans     &kp LBKT              &kp RBKT               &kp AT_SIGN  &kp GRAVE
-&mt LSHFT ESCAPE  &trans         &trans           &trans             &trans    &trans       &trans         &trans     &kp LBRC              &kp RBRC               &kp HASH     &kp TILDE
-                                                  &kp LGUI           &trans    &trans       &trans         &trans     &kp RALT
+&mt LSHFT ESCAPE  &kp SQT        &trans           &trans             &trans    &trans       &trans         &trans     &kp LBRC              &kp RBRC               &kp HASH     &kp TILDE
+                                                  &kp LGUI           &trans    &trans       &trans         &trans     &trans
             >;
         };
     };

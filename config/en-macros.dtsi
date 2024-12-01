@@ -6,6 +6,7 @@
       a_gr: a_gr {
           label = "a_gr";
           compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
           bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 2>, <&kp 4>;
       };
         
@@ -13,6 +14,7 @@
       e_gr: e_gr {
           label = "e_gr";
           compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
           bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 3>, <&kp 2>;
       };
         
@@ -20,6 +22,7 @@
       i_gr: i_gr {
           label = "i_gr";
           compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
           bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 3>, <&kp 6>;
       };
         
@@ -27,6 +30,7 @@
       o_gr: o_gr {
           label = "o_gr";
           compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
           bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 4>, <&kp 2>;
       };
         
@@ -34,6 +38,7 @@
       u_gr: u_gr {
           label = "u_gr";
           compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
           bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 4>, <&kp 9>;
       };
 

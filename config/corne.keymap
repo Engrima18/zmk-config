@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 // My own includes 
-// #include "da-combos.dtsi"
+// #include "en-combos.dtsi"
 #include "en-macros.dtsi"
 #include "en-behaviors.dtsi"
 

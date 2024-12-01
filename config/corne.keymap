@@ -9,51 +9,59 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/keys.h>
 
+// My own includes 
+// #include "da-combos.dtsi"
+#include "en-macros.dtsi"
+#include "en-behaviors.dtsi"
+
+// Shortcuts
+#define HYPER LC(LS(LA(LGUI)))
+
 / {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+            // |  TAB  |  Q  |  W  |  E       |     R    |  T  |   |  Y  |    U    |  I        |  O  |  P  | BSPC |
+            // | SHIFT |  A  |  S  |  D       |     F    |  G  |   |  H  |    J    |  K        |  L  |  +  |CANCEL|
+            // | ALT   |  Z  |  X  |  C       |     V    |  B  |   |  N  |    M    |  ,        |  .  |  -  | GUI  |
+            //                     | CTRL,ESC | LWR,CAPS |SPACE|   |ENTER|RSE,PRINT| &tdvsave  |
 
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R       &kp T             &kp Y      &kp U              &kp I           &kp O    &kp P      &kp BSPC
-&mt LCTRL ESCAPE  &kp A  &kp S  &kp D     &kp F       &kp G             &kp H      &kp J              &kp K           &kp L    &kp PLUS   &kp ENTER
-&kp LEFT_ALT      &kp Z  &kp X  &kp C     &kp V       &kp B             &kp N      &kp M              &kp COMMA       &kp DOT  &kp MINUS  &kp K_CANCEL
-                                &kp LGUI  &lt 2 CAPS  &kp LEFT_SHIFT    &kp SPACE  &lt 1 PRINTSCREEN  &mt RALT ENTER
+&kp TAB      &kp Q  &kp W  &kp E     &kp R       &kp T      &kp Y      &kp U              &kp I           &kp O    &kp P      &kp BSPC
+&kp LSHIFT   &kp A  &kp S  &kp D     &kp F       &kp G      &kp H      &kp J              &kp K           &kp L    &kp PLUS   &kp K_CANCEL
+&kp LEFT_ALT &kp Z  &kp X  &kp C     &kp V       &kp B      &kp N      &kp M              &kp COMMA       &kp DOT  &kp MINUS  &kp LGUI
+                    &mt LCTRL ESCAPE &lt 2 CAPS  &kp SPACE  &kp ENTER  &lt 1 PRINTSCREEN  &mt RALT ENTER
             >;
         };
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // | MUTE |  1   |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+            // |BRI+  | VOL+ |  <  |  >  |     |PGUP |   |LEFT |DOWN | UP  |RGT  |  *  |BTCLR |
+            // |BRI-  | VOL- |     |     |END  |PGDN |   |     |     |  ;  |  :  |  _  |BTNXT |
+            //                     |     |     |     |   |     |     |     |
 
             bindings = <
 &kp C_MUTE            &kp N1             &kp N2         &kp N3            &kp N4   &kp N5           &kp N6    &kp N7    &kp N8         &kp N9     &kp N0          &kp BSPC
 &kp C_BRI_UP          &kp C_VOLUME_UP    &kp LESS_THAN  &kp GREATER_THAN  &trans   &kp PAGE_UP      &kp LEFT  &kp DOWN  &kp UP         &kp RIGHT  &kp ASTERISK    &bt BT_CLR
 &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans         &trans            &kp END  &kp PAGE_DOWN    &trans    &trans    &kp SEMICOLON  &kp COLON  &kp UNDERSCORE  &bt BT_NXT
-                                                        &kp LGUI          &trans   &trans           &trans    &trans    &trans
+                                                        &trans            &trans   &trans           &trans    &trans    &trans
             >;
         };
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // |  "|" |  !  |  "  |  #  |  $  |  %  |   |  &  |  /  |  (  |  )  |  =  | BSPC |
+            // | CTRL |  ?  |  à  |  è  |  é  |  ì  |   |     |     |  [  |  ]  |  @  |  `   |
+            // | SHFT |  ^  |  ò  |  ù  |     |     |   |     |     |  {  |  }  |  #  |  ~   |
+            //                    |     |     |     |   |     |     |     |
 
             bindings = <
 &kp PIPE          &kp BACKSLASH  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp DLLR  &kp PRCNT    &kp AMPERSAND  &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &kp BSPC
-&kp LCTRL         &kt QUESTION   &trans           &trans             &trans    &trans       &trans         &trans     &kp LBKT              &kp RBKT               &kp AT_SIGN  &kp GRAVE
-&mt LSHFT ESCAPE  &kp SQT        &trans           &trans             &trans    &trans       &trans         &trans     &kp LBRC              &kp RBRC               &kp HASH     &kp TILDE
+&kp LCTRL         &kt QUESTION   &a_gr            &e_gr              &e_ac     &i_gr        &trans         &trans     &kp LBKT              &kp RBKT               &kp AT_SIGN  &kp GRAVE
+&mt LSHFT ESCAPE  &kp CARET      &u_gr            &o_gr              &trans    &trans       &trans         &trans     &kp LBRC              &kp RBRC               &kp HASH     &kp TILDE
                                                   &kp LGUI           &trans    &trans       &trans         &trans     &trans
             >;
         };

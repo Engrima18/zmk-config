@@ -6,78 +6,42 @@
       a_gr: a_gr {
           label = "a_gr";
           compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-              = <&macro_press &kp RALT>
-              , <&macro_tap &kp GRAVE >
-              , <&macro_release &kp RALT>
-              , <&macro_tap &kp A >
-              ;
+          bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 2>, <&kp 4>;
       };
         
       // Character è
       e_gr: e_gr {
           label = "e_gr";
           compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-              = <&macro_press &kp RALT>
-              , <&macro_tap &kp GRAVE >
-              , <&macro_release &kp RALT>
-              , <&macro_tap &kp E >
-              ;
+          bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 3>, <&kp 2>;
       };
         
       // Character ì
       i_gr: i_gr {
           label = "i_gr";
           compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-              = <&macro_press &kp RALT>
-              , <&macro_tap &kp GRAVE >
-              , <&macro_release &kp RALT>
-              , <&macro_tap &kp I >
-              ;
+          bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 3>, <&kp 6>;
       };
         
       // Character ò
       o_gr: o_gr {
           label = "o_gr";
           compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-              = <&macro_press &kp RALT>
-              , <&macro_tap &kp GRAVE >
-              , <&macro_release &kp RALT>
-              , <&macro_tap &kp O >
-              ;
+          bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 4>, <&kp 2>;
       };
         
       // Character ù
       u_gr: u_gr {
           label = "u_gr";
           compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-              = <&macro_press &kp RALT>
-              , <&macro_tap &kp GRAVE >
-              , <&macro_release &kp RALT>
-              , <&macro_tap &kp U >
-              ;
+          bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 4>, <&kp 9>;
       };
 
       // Character é 
       e_ac: e_ac {
           label = "e_ac";
           compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          bindings
-              = <&macro_press &kp RALT>
-              , <&macro_tap &kp E >
-              , <&macro_release &kp RALT>
-              , <&macro_tap &kp E >
-              ;
+          bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 3>, <&kp 3>;
       };
         
       // Key sequence for saving in vim: Esc :w Enter

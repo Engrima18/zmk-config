@@ -6,42 +6,42 @@
       a_gr: a_gr {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&text "à">;
+          bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 2>, <&kp 4>;
       };
         
       // Character è
       e_gr: e_gr {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&text "è">;
+          bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 3>, <&kp 2>;
       };
         
       // Character ì
       i_gr: i_gr {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&text "ì">;
+          bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 3>, <&kp 6>;
       };
         
       // Character ò
       o_gr: o_gr {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&text "ò">;
+          bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 4>, <&kp 2>;
       };
         
       // Character ù
       u_gr: u_gr {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&text "ù">;
+          bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 4>, <&kp 9>;
       };
 
       // Character é 
       e_ac: e_ac {
           compatible = "zmk,behavior-macro";
           #binding-cells = <0>;
-          bindings = <&text "é">;
+          bindings = <&kp LEFT_ALT>, <&kp 0>, <&kp 2>, <&kp 3>, <&kp 3>;
       };
         
       // Key sequence for saving in vim: Esc :w Enter

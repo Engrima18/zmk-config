@@ -12,6 +12,7 @@
 // My own includes 
 // #include "en-combos.dtsi"
 #include "en-macros.dtsi"
+#include "accents.dtsi"
 #include "en-behaviors.dtsi"
 
 // Shortcuts
@@ -60,8 +61,8 @@
 
             bindings = <
 &kp PIPE          &kp BACKSLASH  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp DLLR  &kp PRCNT    &kp AMPERSAND  &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &kp BSPC
-&kp LCTRL         &kt QUESTION   &a_gr            &e_gr              &e_ac     &i_gr        &trans         &trans     &kp LBKT              &kp RBKT               &kp AT_SIGN  &kp GRAVE
-&mt LSHFT ESCAPE  &kp CARET      &o_gr            &u_gr              &trans    &trans       &trans         &trans     &kp LBRC              &kp RBRC               &kp HASH     &kp TILDE
+&kp LCTRL         &kt QUESTION   &ac_agrv         &ac_egrv           &ac_eacu  &ac_igrv     &trans         &trans     &kp LBKT              &kp RBKT               &kp AT_SIGN  &kp GRAVE
+&mt LSHFT ESCAPE  &kp CARET      &ac_ogrv         &ac_ugrv           &trans    &trans       &trans         &trans     &kp LBRC              &kp RBRC               &kp HASH     &kp TILDE
                                                   &kp LGUI           &trans    &trans       &trans         &trans     &trans
             >;
         };

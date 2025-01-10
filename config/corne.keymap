@@ -61,7 +61,7 @@
 
             bindings = <
 &kp PIPE          &kp BACKSLASH  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp DLLR  &kp PRCNT    &kp AMPERSAND  &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &kp BSPC
-&kp LCTRL         &kt QUESTION   &ac_agrv         &ac_egrv           &ac_eacu  &ac_igrv     &kp SQT        &trans     &kp LBKT              &kp RBKT               &kp AT_SIGN  &kp GRAVE
+&kp LCTRL         &kt QUESTION   &ac_agrv         &ac_egrv           &e_ac     &ac_igrv     &kp APOS       &trans     &kp LBKT              &kp RBKT               &kp AT_SIGN  &kp GRAVE
 &mt LSHFT ESCAPE  &kp CARET      &ac_ogrv         &ac_ugrv           &trans    &trans       &trans         &trans     &kp LBRC              &kp RBRC               &kp HASH     &kp TILDE
                                                   &kp LGUI           &trans    &trans       &trans         &trans     &trans
             >;

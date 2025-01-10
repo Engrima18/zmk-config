@@ -51,6 +51,10 @@
 
     accents {
         ACCENTED_KEY(agrv, "à", "À", "àÀ", A, GRAVE)
+        ACCENTED_KEY(egrv, "è", "È", "èÈ", E, GRAVE)
+        ACCENTED_KEY(igrv, "ì", "Ì", "ìÌ", I, GRAVE)
+        ACCENTED_KEY(ogrv, "ò", "Ò", "òÒ", O, GRAVE)
+        ACCENTED_KEY(ugrv, "ù", "Ù", "ùÙ", U, GRAVE)
         ACCENTED_KEY(aacu, "á", "Á", "áÁ", A, E)
         ACCENTED_KEY(atil, "ã", "Ã", "ãÃ", A, N)
         ACCENTED_KEY(acir, "â", "Â", "âÂ", A, I)

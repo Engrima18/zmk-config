@@ -27,13 +27,13 @@
             // |  TAB  |  Q  |  W  |  E       |     R    |  T  |   |  Y  |    U    |  I        |  O  |  P  | BSPC |
             // | SHIFT |  A  |  S  |  D       |     F    |  G  |   |  H  |    J    |  K        |  L  |  +  |DELETE|
             // | ALT   |  Z  |  X  |  C       |     V    |  B  |   |  N  |    M    |  ,        |  .  |  -  | GUI  |
-            //                     | CTRL,ESC | LWR,CAPS |SPACE|   |ENTER|RSE,PRINT| save      |
+            //                     | CTRL,ESC | LWR,CAPS |SPACE|   |ENTER|RSE,PRINT|  SHIFT    |
 
             bindings = <
 &kp TAB      &kp Q  &kp W  &kp E     &kp R       &kp T             &kp Y      &kp U              &kp I           &kp O    &kp P      &kp BSPC
 &kp LSHIFT   &kp A  &kp S  &kp D     &kp F       &kp G             &kp H      &kp J              &kp K           &kp L    &kp PLUS   &kp DEL
 &kp LEFT_ALT &kp Z  &kp X  &kp C     &kp V       &kp B             &kp N      &kp M              &kp COMMA       &kp DOT  &kp MINUS  &kp LGUI
-                    &mt LCTRL ESCAPE &lt 2 CAPS  &kp SPACE  &kp ENTER  &lt 1 PRINTSCREEN  &tdvsave
+                    &mt LCTRL ESCAPE &lt 2 CAPS  &kp SPACE  &kp ENTER  &lt 1 PRINTSCREEN  &kp LSHFT
             >;
         };
 
@@ -55,13 +55,13 @@
         raise_layer {
             // -----------------------------------------------------------------------------------------
             // |  "|" |  !  |  "  |  #  |  $  |  %  |   |  &  |  /  |  (  |  )  |  =  | BSPC |
-            // | CTRL |  ?  |  à  |  è  |  é  |  ì  |   |     |     |  [  |  ]  |  @  |  `   |
+            // | CTRL |  ?  |  à  |  è  |  é  |  ì  |   |  '  |     |  [  |  ]  |  @  |  `   |
             // | SHFT |  ^  |  ò  |  ù  |     |     |   |     |     |  {  |  }  |  #  |  ~   |
             //                    |     |     |     |   |     |     |     |
 
             bindings = <
 &kp PIPE          &kp BACKSLASH  &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp DLLR  &kp PRCNT    &kp AMPERSAND  &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &kp BSPC
-&kp LCTRL         &kt QUESTION   &ac_agrv         &ac_egrv           &ac_eacu  &ac_igrv     &trans         &trans     &kp LBKT              &kp RBKT               &kp AT_SIGN  &kp GRAVE
+&kp LCTRL         &kt QUESTION   &ac_agrv         &ac_egrv           &ac_eacu  &ac_igrv     &kp SQT        &trans     &kp LBKT              &kp RBKT               &kp AT_SIGN  &kp GRAVE
 &mt LSHFT ESCAPE  &kp CARET      &ac_ogrv         &ac_ugrv           &trans    &trans       &trans         &trans     &kp LBRC              &kp RBRC               &kp HASH     &kp TILDE
                                                   &kp LGUI           &trans    &trans       &trans         &trans     &trans
             >;
